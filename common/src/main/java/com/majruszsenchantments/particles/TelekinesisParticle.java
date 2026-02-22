@@ -36,7 +36,7 @@ public class TelekinesisParticle extends CustomParticle {
 		super.tick();
 
 		if( !this.removed ) {
-			this.setSprite( this.spriteSet.get( ( this.lifetime * this.age / 4 ) % this.lifetime, this.lifetime ) );
+			this.setSpriteFromAge(this.spriteSet);
 		}
 	}
 
