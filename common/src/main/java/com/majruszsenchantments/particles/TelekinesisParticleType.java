@@ -30,9 +30,9 @@ public class TelekinesisParticleType extends CustomParticleType< TelekinesisPart
 		public Options( int age, int lifetime, float pulseSpeed ) {
 			this();
 
-			this.age = age;
-			this.lifetime = lifetime;
-			this.pulseSpeed = pulseSpeed;
+			this.lifetime = Math.max(1, lifetime); 
+    		this.age = Math.max(0, age);
+    		this.pulseSpeed = pulseSpeed;
 		}
 	}
 }
